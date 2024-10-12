@@ -48,10 +48,10 @@ const Skill = () => {
       </Col>
       <Col md={6} className='pt-5 pt-md-0'>
         <div className='ps-0 ps-md-4'>
-          <h3>Backend: PHP</h3>
+          <h3>Backend: </h3>
 
           <div className="skill-bar">
-            <label>Php</label>
+            <label>MySQL</label>
             <div className="progress">
               <div className="progress-bar" style={{ width: '90%' }}>90%</div>
             </div>
@@ -59,7 +59,7 @@ const Skill = () => {
           <div className="skill-bar">
             <label>MongoDB</label>
             <div className="progress">
-              <div className="progress-bar" style={{ width: '90%' }}>90%</div>
+              <div className="progress-bar" style={{ width: '80%' }}>90%</div>
             </div>
           </div>
           <div className="skill-bar">

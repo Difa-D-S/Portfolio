@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import hero from "../assets/hero.png";
-import { Link } from "react-scroll";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState('');
+  const [expanded, setExpanded] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    setExpanded(false);
   };
 
   return (
     <div className="header">
-      <Navbar expand="lg" className="sticky-top">
+      <Navbar expand="lg" className="sticky-top" expanded={expanded}>
         <Container>
           <Navbar.Brand href="#home" className={`px-3 ${activeLink === 'difa' ? 'active' : ''}`} 
                 onClick={() => handleLinkClick('difa')}><p className="logo">Difa D S</p></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link 
